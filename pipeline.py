@@ -51,7 +51,7 @@ def load_select_collection_db(pipeline: Pipeline = None) -> LoadInfo:
             dataset_name="mongo_select",
             loader_file_format="parquet"
         )
-    collection_name = json.loads(os.getenv('SOURCES__MONGODB__COLLECTION_NAMES'))
+    collection_name = os.getenv('SOURCES__MONGODB__COLLECTION_NAMES').split(",")
     # Load the MongoDB data source
     mongodb_source = mongodb(collection_names=collection_name)
     # Run the pipeline
