@@ -50,7 +50,7 @@ def get_iceberg_credentials(cloud_provider):
     secrets_from_env = {}
     if cloud_provider == "gcs":
         secrets_from_env = {
-            "project-is": get_env_var("GCS__CREDENTIALS__PROJECT-ID"),
+            "project-is": get_env_var("GCS__CREDENTIALS__PROJECT_ID"),
             "secret_file_path": get_env_var("GCS__CREDENTIALS__SECRET_FILE_PATH"),
         }
     elif cloud_provider == "abfss":
