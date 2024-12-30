@@ -2,7 +2,7 @@
 FROM python:3.12
 
 # Set the working directory inside the container
-WORKDIR /app
+WORKDIR /etc/dataos/work
 
 # Copy your project files into the container
 COPY . .
