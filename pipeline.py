@@ -18,6 +18,7 @@ except ImportError:
     name="iceberg",
     loader_file_format="parquet",
     batch_size=100000,
+    max_parallel_load_jobs=5,
     naming_convention="snake_case"
 )
 def iceberg_insert(
