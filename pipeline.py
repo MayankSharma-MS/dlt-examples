@@ -17,7 +17,7 @@ except ImportError:
 @dlt.destination(
     name="iceberg",
     loader_file_format="parquet",
-    batch_size=1,
+    batch_size=100000,
     naming_convention="snake_case"
 )
 def iceberg_insert(
